@@ -1,0 +1,201 @@
+:root {
+    --primary: #111111;
+    --bg: #250404;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: #ffff;
+    height: 100vh; 
+    font-family: 'Koh Santepheap', sans-serif; 
+
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 50px; /* Atur ukuran logo */
+    height: 50px;
+    object-fit: contain; /* Sesuaikan logo agar proporsional */
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-nav a:hover {
+    color: red;
+}
+
+.nav-register {
+    background-color: #9e1e1e; /* Latar belakang merah */
+    color: white; /* Warna teks putih */
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    padding: 0; /* Hilangkan padding */
+    overflow: hidden;
+}
+
+/* Left side with background image */
+.background-image {
+    flex: 1.5; /* Occupies 50% of the width */
+    background-image: url('../img/logregis.png'); /* Replace with your image path */
+   /* Hindari pengulangan gambar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 105vh; 
+    width: 100%; /* Pastikan elemen memenuhi lebar*/
+    
+}
+       
+
+/* Right side with solid color and form */
+.form-section {
+    flex: 1; /* Occupies 50% of the width */
+    background-color: #3e0d0d; /* Solid color background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form styling */
+.register-form {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: none;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    margin-left: 0;
+}
+
+.register-form h2 {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 35px;
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+/* Input Styles */
+.register-form input {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #fff; /* Garis bawah */
+    background-color: transparent; /* Transparan */
+    color: #fff; /* Warna teks */
+    font-size: 16px;
+    outline: none; /* Hilangkan outline */
+    
+}
+
+.register-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Warna placeholder transparan */
+}
+
+.register-form input:focus {
+    border-bottom: 2px solid #ff5252; /* Warna garis saat fokus */
+    transition: 0.3s ease; /* Animasi fokus */
+}
+
+
+.register-form button {
+    
+    width: 60%;
+    margin: 30px;
+    text-align: center;
+    font-family: 'Koh Santepheap', sans-serif; 
+    background-color: #700505;
+    border-radius: 10px;
+    color: white; /* Warna teks putih */
+    font-weight: bold;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #990000;
+}
+
+.register-form p {
+    text-align: left;
+    margin-top: 5px;
+    color: white;
+}
+
+.register-form p a {
+    color: #700505;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-form p a:hover {
+    text-decoration: underline;
+}

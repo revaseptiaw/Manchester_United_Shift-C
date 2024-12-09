@@ -1,0 +1,206 @@
+/* Mengatur container pemain */
+.players {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Jarak antar elemen pemain */
+    justify-content: flex-start; /* Mengatur posisi elemen ke kiri */
+    align-items: flex-start; /* Menyelaraskan elemen di bagian atas */
+    padding: 10px; /* Menambahkan jarak di dalam container */
+}
+
+#players-section h2 {
+    margin-top: 50px; /* Menambahkan jarak dari navbar */
+    text-align: left; /* Menyelaraskan teks ke tengah (opsional) */
+    font-size: 32px; /* Sesuaikan ukuran font */
+   
+}
+
+/* Mengatur elemen individual player */
+.player {
+    position: relative; /* Agar teks dapat ditempatkan di atas gambar */
+    width: 250px; /* Lebar setiap elemen pemain */
+    text-align:center; /* Konten di dalam player rata tengah */
+    margin-bottom: 50px;
+}
+
+/* Mengatur gambar pemain */
+.player img {
+    width: 100%; /* Gambar memenuhi container player */
+    height: auto; /* Gambar tetap proporsional */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    border-radius: 10px; /* Membuat sudut gambar halus */
+    border: 2px solid #230b0b; /* Menambahkan border putih */
+}
+
+/* Mengatur overlay menjadi baris horizontal */
+.player .overlay {
+    position: absolute;
+    top: 170px; /* Jarak dari atas gambar */
+    left: 10px; /* Jarak dari sisi kiri gambar */
+    right: 10px; /* Jarak dari sisi kanan gambar */
+    display: flex; /* Menyusun elemen secara horizontal */
+    justify-content: space-between; /* Jarak maksimum antara elemen kiri dan kanan */
+    align-items: center; /* Rata vertikal elemen */
+    padding: 5px 10px; /* Menambahkan ruang dalam overlay */
+    border-radius: 5px; /* Membuat sudut bulat */
+   
+    color: #fff; /* Warna teks */
+}
+
+/* Angka pemain */
+.player .overlay .number {
+    font-size: 50px; /* Ukuran font angka */
+    font-weight: bold; /* Angka tebal */
+    color: #fff; /* Warna angka */
+    flex-shrink: 0; /* Angka tidak mengecil */
+}
+
+/* Nama pemain */
+.player .overlay .name {
+    font-size: 20px; /* Ukuran font nama */
+    text-align: right; /* Nama rata kanan */
+    text-transform: uppercase; /* Semua huruf kapital */
+    line-height: 1.2; /* Jarak antar baris */
+    flex-grow: 1; /* Nama memenuhi ruang yang tersedia */
+    margin-left: 20px; /* Jarak dari angka */
+}
+
+.modal {
+    display: block; /* Default tidak terlihat */
+    position: fixed; /* Tetap di posisi yang sama saat di-scroll */
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(4px); /* Optional: adds a blur effect */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparansi latar belakang */
+    z-index: 1000; /* Agar berada di atas elemen lainnya */
+    overflow: auto; /* Pastikan konten modal tidak terpotong */
+}
+
+.modal-header h1 {
+    text-align: center;
+    font-size: 55px;
+    font-family: Metal Mania;
+    background: linear-gradient(to bottom, #ffa61f 70%, #FFFFFF 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.modal-body {
+    display: flex; /* Mengatur layout sebagai Flexbox */
+    flex-direction: row; /* Elemen disusun secara horizontal */
+    align-items: center; /* Vertikal sejajar */
+    gap: 90px; /* Jarak antara gambar dan biodata */
+    flex-wrap: wrap; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#modal-img {
+    width: 250px;
+    height: 360px; /* Pastikan proporsi gambar */
+    object-fit: contain; /* Memotong gambar jika perlu */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    margin-bottom: 0;
+}
+
+.modal-text {
+    background-color: rgba(55, 10, 10, 0.8);
+    flex: 1; /* Agar biodata menempati sisa ruang */
+    border-radius: 8px;
+    max-width: 400px;
+    color: white; /* Warna teks */
+    position: relative;
+    padding: 15px;
+}
+
+.modal-text p {
+    margin: 10px 0; /* Memberikan margin vertikal antar paragraf */
+    line-height: 1.8; /* Menambah jarak antar baris */
+}
+
+.modal-text strong {
+    display: inline-block; /* Agar teks label menjadi blok */
+    width: 120px; /* Atur lebar label untuk memberikan ruang */
+    text-align: left; /* Pastikan teks label rata kiri */
+}
+
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #530303;/* Ganti dengan path gambar Anda */
+    background-size: cover; /* Agar gambar menyesuaikan ukuran */
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-image: url('../img/biobg.png');
+    border: 1px solid #680202;
+    color: white; /* Agar teks kontras dengan gambar */
+    border-radius: 5px; /* Opsional, untuk sudut melengkung */
+    
+}
+
+.modal-quote {
+    position: absolute;
+    margin-top: 20px; /* Tambahkan jarak atas dari modal-body */
+    padding: 10px;
+    max-width: 100%;
+   width: 100%;
+    color: white; /* Warna teks */
+    text-align: justify; /* Rata tengah teks */
+    font-size: 13px; /* Ukuran font */
+}
+
+.modal-headerlogo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logomodal-img {
+    width: 50px; /* Atur ukuran logo */
+    height: 50px;
+    object-fit: contain; /* Sesuaikan logo agar proporsional */
+}
+
+#modal-number {
+    font-size: 40px; /* Atur ukuran font sesuai kebutuhan */
+    font-family: 'Boogaloo', sans-serif;
+    font-weight: bold; /* Opsional: Buat teks lebih tebal */
+    color: white; /* Atur warna teks agar kontras */
+    text-align: center; /* Pastikan teks rata tengah */
+    margin-top: 10px; /* Tambahkan jarak atas (opsional) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Opsional: Tambahkan bayangan */
+}
+
+
+.back-button {
+    position: absolute; /* Memungkinkan penempatan absolut */
+    bottom: 50px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    background: linear-gradient( #ffa61f 60%, #ffffff); /* Gradient: Setengah orange, setengah putih */
+    color: rgb(177, 58, 58); /* Warna teks */
+    text-decoration: none; /* Hilangkan garis bawah */
+    padding: 10px 20px; /* Jarak dalam */
+    border-radius: 8px; /* Sudut melengkung */
+    font-size: 16px; /* Ukuran font */
+    font-weight: bold; /* Teks tebal */
+    text-align: center; /* Rata tengah */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 166, 31, 0.6); /* Efek bayangan mengkilap */
+    transition: all 0.3s ease; /* Efek transisi */
+}
+
+.back-button:hover {
+    background: orange;
+    color: rgb(177, 58, 58); /* Warna teks saat di-hover */
+}

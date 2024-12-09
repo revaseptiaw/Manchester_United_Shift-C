@@ -1,0 +1,201 @@
+:root {
+    --primary: #111111;
+    --bg: #250404;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: #ffff;
+    min-height: 5000px;
+    font-family: 'Koh Santepheap', sans-serif; 
+
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 50px; /* Atur ukuran logo */
+    height: 50px;
+    object-fit: contain; /* Sesuaikan logo agar proporsional */
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-nav a:hover {
+    color: red;
+}
+
+.nav-register {
+    background-color: #9e1e1e; /* Latar belakang merah */
+    color: white; /* Warna teks putih */
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/homeMU.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero h1 {
+    position: absolute;
+    bottom: 90px;  /* Menempatkan teks 20px dari bawah */
+    left: 30%;  /* Menempatkan teks di tengah secara horizontal */
+    transform: translateX(-50%);  /* Menyempurnakan agar teks tepat di tengah */
+    margin: 0; 
+    font-size: 80px;
+    font-family:'Metal Mania', cursive;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Profile Section */
+.profile {
+    padding: 50px;
+    margin-top: 0px;
+    text-align: center;
+    background-image: linear-gradient(rgba(34, 10, 10, 0.7), rgba(34, 10, 10, 0.7)), url('../img/profile-bg.png') ; /* Tambahkan overlay hitam dengan transparansi */
+    background-repeat: no-repeat; /* Jangan ulangi gambar */
+    background-position: center 50%;
+    /* Posisi logo di tengah */
+    background-size: contain; /* Sesuaikan ukuran gambar agar proporsional */
+    height: 100vh; /* Buat tinggi 100% layar */
+    color: white; /* Warna teks agar kontras dengan background */
+    position: relative; /* Untuk teks di atas background */
+}
+
+.profile h2 {
+    text-align: left;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: white;
+    z-index: 2;
+}
+
+.profile p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Abyssinica SIL', sans-serif;
+    width: 90%; /* Batasi lebar elemen */
+    word-wrap: break-word;
+    margin: auto;
+    color: white; /* Pastikan teks dapat terlihat */
+}
+
+#players-section {
+    text-align: left;
+    padding: 50px;
+    font-size: 30px;
+    position: relative; /* Dibutuhkan untuk posisi tombol */
+}
+
+#players-section h2 {
+    text-align: left; /* Jika ingin judul di tengah */
+    margin-bottom: 25px; /* Jarak antara judul dan elemen pemain */
+    font-size: 40px; /* Ukuran font judul */
+}
+
+.players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Mengatur pemain ke tengah */
+    gap: 100px; /* Jarak antar pemain */
+    position: relative;
+}
+
+.player {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+}
+
+.player img {
+    width: 210px;  /* Mengatur lebar gambar */
+    height: 210px;  /* Mengatur tinggi gambar */
+    object-fit: cover;  /* Agar gambar tetap proporsional */
+    border-radius: 50%;  /* Membuat gambar bulat */
+    border: 1px solid rgb(42, 5, 5);  /* Menambahkan border */
+}
+
+.player p {
+    font-family: 'Bevan', sans-serif;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Tombol See More */
+button {
+    font-family: 'Bevan', sans-serif;
+    position: absolute; /* Membuat tombol bebas bergerak */
+    bottom: 130px; /* Menempatkan tombol di bagian bawah */
+    right: 70px; /* Menempatkan tombol di sisi kanan */
+    transform: translateY(50%); /* Untuk sedikit jarak dari grid */
+    background-color: #482121;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #4f0505;
+}
+

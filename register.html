@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Bevan&family=Koh+Santepheap:wght@900&family=Metal+Mania&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="img/logo.png" alt="Manchester United Logo" class="logo-img">
+            Manchester United
+        </div>
+        <ul class="navbar-nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="players.html">PLAYER</a></li>
+            <li><a href="#merchandise">MERCHANDISE</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="register.html" class="nav-register">REGISTER</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="background-image">
+        </div>
+        <div class="form-section">
+            <div class="register-form">
+                <h2>Register</h2>
+                <form action="register_process.php" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Do you have account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
