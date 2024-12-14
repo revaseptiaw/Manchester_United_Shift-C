@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Koh+Santepheap:wght@900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="img/logo.png" alt="Manchester United Logo" class="logo-img">
+            <span>Manchester United</span>
+        </div>
+        <ul class="navbar-nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="players.html">PLAYER</a></li>
+            <li><a href="merchandise.html">MERCHANDISE</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="register.html" class="nav-register">REGISTER</a></li>
+        </ul>
+    </nav>
+
+    <main class="checkout-container">
+        <h1>Shopping<span>Bag</span></h1>
+        <div class="checkout-content">
+            <div class="cart-items" id="cart-container">
+                <div class="item">
+                    <img src="img/checkout/brown_toys.png" alt="Lightbrown Doggy">
+                    <div class="item-info">
+                        <h2>Lightbrown Doggy</h2>
+                        <p>Rp. 350.000,00</p>
+                        <div class="quantity">
+                                <i data-feather="plus-circle" class="tambah"></i>
+                            <span id="quantity">2</span>
+                                <i data-feather="minus-circle" class="kurang"></i>
+                        </div>
+                    </div>
+                    <i data-feather="trash-2" class="delete"></i>
+                </div>
+
+                <div class="item">
+                    <img src="img/checkout/jersey_navy.png" alt="Blue Jersey">
+                    <div class="item-info">
+                        <h2>Blue Jersey</h2>
+                        <p>Rp. 270.000,00</p>
+                        <div class="quantity">
+                            <i data-feather="plus-circle" class="tambah"></i>
+                            <span id="quantity">2</span>
+                            <i data-feather="minus-circle" class="kurang"></i>
+                        </div>
+                    </div>
+                    <i data-feather="trash-2" class="delete"></i>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h2>Detail Pesanan</h2>
+                <div class="summary-item">
+                    <span class="item-name">Lightbrown Doggy</span>
+                    <div class="item-details">
+                        <span class="item-quantity">2</span>
+                        <span class="item-price">Rp. 540.000,00</span>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <span class="item-name">Blue Jersey</span>
+                    <div class="item-details">
+                        <span class="item-quantity">2</span>
+                        <span class="item-price">Rp. 540.000,00</span>
+                    </div>
+                
+                </div>
+                <div class="summary-item">
+                    
+                    <span class="total">Total Pesanan</span>
+                    <span class="total-price">Rp. 890.000,00</span>
+                </div>
+                <button class="checkout-button" id="checkout-button">CheckOut</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" id="home"><i data-feather="home"></i></a>
+        <a href="checkoutPage.html" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+    </footer>
+
+   
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            feather.replace();
+            displayCart();
+    
+            function displayCart() {
+                const cartItemsContainer = document.querySelector('.cart-items');
+                const orderSummaryContainer = document.querySelector('.order-summary');
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let totalPrice = 0;
+    
+                // Kosongkan container jika sudah ada konten
+                cartItemsContainer.innerHTML = "";
+                orderSummaryContainer.innerHTML = "<h2>Detail Pesanan</h2>";
+    
+                // Tampilkan setiap item di cart
+                cart.forEach((item, index) => {
+                    // Hitung total harga
+                    totalPrice += item.price * item.quantity;
+    
+                    // Tambahkan ke bagian cart-items
+                    cartItemsContainer.innerHTML += `
+                        <div class="item">
+                            <img src="${item.image}" alt="${item.name}">
+                            <div class="item-info">
+                                <h2>${item.name}</h2>
+                                <p>Rp. ${item.price.toLocaleString()}</p>
+                                <div class="quantity">
+                                    <i data-feather="minus-circle" class="kurang" onclick="updateQuantity(${index}, -1)"></i>
+                                    <span>${item.quantity}</span>
+                                    <i data-feather="plus-circle" class="tambah" onclick="updateQuantity(${index}, 1)"></i>
+                                </div>
+                            </div>
+                            <i data-feather="trash-2" class="delete" onclick="removeItem(${index})"></i>
+                        </div>
+                    `;
+    
+                    // Tambahkan ke order summary
+                    orderSummaryContainer.innerHTML += `
+                        <div class="summary-item">
+                            <span class="item-name">${item.name}</span>
+                            <div class="item-details">
+                                <span class="item-quantity">${item.quantity}</span>
+                                <span class="item-price">Rp. ${(item.price * item.quantity).toLocaleString()}</span>
+                            </div>
+                        </div>
+                    `;
+                });
+    
+                // Tambahkan total pesanan
+                orderSummaryContainer.innerHTML += `
+                    <div class="summary-item">
+                        <span class="total">Total Pesanan</span>
+                        <span class="total-price">Rp. ${totalPrice.toLocaleString()}</span>
+                    </div>
+                      <button class="checkout-button" id="checkout-button">CheckOut</button>
+                `;
+    
+                // Update feather icons
+                feather.replace();
+            
+    
+             // Menambahkan event listener pada tombol Checkout
+        document.getElementById("checkout-button").addEventListener("click", function() {
+            // Buat pesan untuk WhatsApp
+            let message = "Pesanan saya:\n";
+            cart.forEach(item => {
+                message += `${item.name} (x${item.quantity}) - Rp. ${(item.price * item.quantity).toLocaleString()}\n`;
+            });
+            message += `\nTotal: Rp. ${totalPrice.toLocaleString()}`;
+            
+            // Encode pesan untuk URL
+            message = encodeURIComponent(message);
+
+            // Nomor WhatsApp tujuan (contoh: +62xxx)
+            const phoneNumber = "083806090453";
+
+            // Buat URL WhatsApp
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+            // Redirect ke WhatsApp
+            window.location.href = whatsappURL;
+        });
+    }
+        
+            // Fungsi update quantity
+            window.updateQuantity = function(index, change) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart[index].quantity += change;
+                if (cart[index].quantity <= 0) {
+                    cart.splice(index, 1);
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                displayCart();
+            };
+    
+            // Fungsi hapus item
+            window.removeItem = function(index) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart.splice(index, 1);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                displayCart();
+            };
+        });
+    </script>
+    
+    
+</body>
+</html>

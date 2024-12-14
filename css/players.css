@@ -66,7 +66,7 @@
 }
 
 .modal {
-    display: block; /* Default tidak terlihat */
+    display: none; /* Default tidak terlihat */
     position: fixed; /* Tetap di posisi yang sama saat di-scroll */
     top: 0;
     left: 0;
@@ -100,6 +100,7 @@
 }
 
 #modal-img {
+    display: block;
     width: 250px;
     height: 360px; /* Pastikan proporsi gambar */
     object-fit: contain; /* Memotong gambar jika perlu */

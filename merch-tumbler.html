@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumbler</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Bevan&family=Boogaloo&family=Koh+Santepheap:wght@900&family=Metal+Mania&display=swap" rel="stylesheet">
+    
+<!-- Feather Icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="css/merchJersey.css">
+</head>
+<body>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="img/logo.png" alt="Manchester United Logo" class="logo-img">
+                Manchester United
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="players.html">PLAYER</a></li>
+                <li><a href="merchandise.html">MERCHANDISE</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="register.html" class="nav-register">REGISTER</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Tumbler</h1>
+            <div class="categories">
+                <div class="category">
+                    <div class="category-img">
+                        <img src="img/tumblr/bigred_united.png" alt="Bigred_United">
+                        <div class="product-info">
+                            <p class="price">Rp. 170.000,00</p>
+                            <div class="bottom-bar">
+                                <div class="product-name">Big Red United</div>
+                            <button class="add-to-cart"
+                            data-name="Big Red United" 
+                            data-price="170000" 
+                            data-image="img/tumblr/bigred_united.png" 
+                            onclick="addToCart(this)">
+                        <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <div class="category-img">
+                        <img src="img/tumblr/tallred_mu.png" alt="Tallred_MU">
+                        <div class="product-info">
+                            <p class="price">Rp. 185.000,00</p>
+                            <div class="bottom-bar">
+                            <h2 class="product-name">Tall Red MU</h2>
+                            <button class="add-to-cart"     
+                            data-name="Tall Red MU" 
+                            data-price="185000" 
+                            data-image="img/tumblr/tallred_mu.png" 
+                            onclick="addToCart(this)">
+                        <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <div class="category-img">
+                        <img src="img/tumblr/black_expreco.png" alt="Black_Expreco">
+                        <div class="product-info">
+                            <p class="price">Rp. 155.000,00</p>
+                            <div class="bottom-bar">
+                            <h2 class="product-name">Black Expreco</h2>
+                            <button class="add-to-cart"    
+                            data-name="Black Expreco" 
+                            data-price="155000" 
+                            data-image="img/tumblr/black_expreco.png" 
+                            onclick="addToCart(this)">
+                        <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="category">
+                    <div class="category-img">
+                        <img src="img/tumblr/black_hole.png" alt="Black_Hole">
+                        <div class="product-info">
+                            <p class="price">Rp. 190.000,00</p>
+                            <div class="bottom-bar">
+                            <h2 class="product-name">Black Hole</h2>
+                            <button class="add-to-cart"     
+                            data-name="Black Hole" 
+                            data-price="190000" 
+                            data-image="img/tumblr/black_hole.png" 
+                            onclick="addToCart(this)">
+                        <i data-feather="shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer">
+            
+                    <a href="index.html" id="home"><i data-feather="home"></i></a>
+                    <a href="checkoutPage.html" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+            </div>
+        </footer>
+        <script>
+            function addToCart(button) {
+                const name = button.dataset.name;
+                const price = button.dataset.price;
+                const image = button.dataset.image;
+        
+                // Ambil cart dari localStorage atau buat array kosong
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+                // Tambahkan produk ke cart
+                cart.push({
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
+        
+                // Simpan kembali ke localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+        
+                // Redirect ke halaman checkout
+                window.location.href = "checkoutPage.html";
+            }
+            feather.replace();
+        </script>
+    </body>
+    </html>
