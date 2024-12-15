@@ -1,11 +1,8 @@
 // Mendapatkan elemen modal dan tombol back
 const modal = document.getElementById('player-modal');
 const backButton = document.querySelector('.back-button');
-
-// Mengambil semua elemen pemain
 const players = document.querySelectorAll('.player');
 
-// Menambahkan event listener untuk setiap gambar pemain
 players.forEach(player => {
     player.addEventListener('click', function() {
         // Mengambil data dari atribut data-* pemain
@@ -35,13 +32,13 @@ players.forEach(player => {
 
 // Menambahkan event listener untuk tombol "Back" untuk menutup modal
 backButton.addEventListener('click', function(event) {
-    event.preventDefault(); // Mencegah tindakan default
-    modal.style.display = 'none'; // Menyembunyikan modal
+    event.preventDefault();
+    modal.style.display = 'none'; 
 });
 
 // Menambahkan event listener agar modal bisa ditutup dengan klik di luar modal
 window.addEventListener('click', function(event) {
     if (event.target === modal) {
-        modal.style.display = 'none'; // Menyembunyikan modal jika klik di luar modal
+        modal.style.display = 'none'; 
     }
 });

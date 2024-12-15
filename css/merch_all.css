@@ -7,8 +7,8 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     margin-top: 40px;
-    text-align: left; /* Mengatur teks ke kiri */
-    margin-left: 40px; /* Memberikan jarak dari tepi kiri */
+    text-align: left; 
+    margin-left: 40px; 
 }
 
 .categories {
@@ -29,6 +29,7 @@ h1 {
 .category img {
     width: 100%;
     height: auto;
+    
     border-radius: 15px;
     border: 1px solid rgb(255, 255, 255);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
@@ -55,14 +56,14 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     position: absolute;
-    top: 70%; /* Posisi di tengah */
+    top: 70%;
     left: 35%;
     transform: translate(-50%, -50%);
 
 }
 
 .product-info .product-name {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0;
     text-align: left;
@@ -74,14 +75,14 @@ h1 {
     justify-content: space-between;
     align-items: center;
     color: black;
-    width: 100%; /* Sama dengan lebar elemen gambar */
-    background-color: #d3d3d3; /* Warna abu muda */
-    padding: 10px; /* Tambahkan jarak di dalam elemen */
-    border-radius: 0 0 10px 10px; /* Opsional: Membuat sudut bawah melengkung */
-    position: absolute; /* Tetap di atas gambar */
-    bottom: 0; /* Letakkan di bagian bawah elemen */
-    left: 0; /* Mulai dari tepi kiri */
-    box-sizing: border-box; /* Agar padding dihitung dalam lebar total */
+    width: 100%; 
+    background-color: #d3d3d3; 
+    padding: 10px; 
+    border-radius: 0 0 10px 10px; 
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    box-sizing: border-box;
 }
 
 .add-to-cart {
@@ -94,46 +95,49 @@ h1 {
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 20px; /* Jarak dari bawah */
-    right: 5px; /* Jarak dari kanan */
+    bottom: 20px; 
+    right: 5px;
     
 }
 
 .add-to-cart:active {
-    background: none;  /* Pastikan tidak ada latar belakang saat tombol ditekan */
+    background: none;  
 }
 
 .add-to-cart:hover {
     color: #9e1e1e;
-    background: none;  /* Pastikan tidak ada latar belakang saat hover */
+    background: none;  
 }
 
 
 .add-to-cart i {
-    margin-left: 0px; /* Memberikan jarak antara ikon dan teks */
-    font-size: 18px;    /* Ukuran ikon */
+    margin-left: 0px; 
+    font-size: 18px;   
 }
 
 footer {
     text-align: center;
     padding: 40px 0;
-    margin-top: auto; /* Posisi footer di bawah */
+    margin-top: auto; 
     min-height: 100px;
 }
 
 footer .footer {
-    display: inline-block; /* Membatasi selebar konten */
-    background-color: #d3d3d3; ; /* Warna latar belakang abu-abu gelap */
-    padding: 10px 20px; /* Jarak dalam elemen */
-    border-radius: 14px; /* Opsional: sudut melengkung */
-    color: black; /* Warna teks */
+    display: inline-block; 
+    background-color: #d3d3d3; 
+    padding: 10px 20px;
+    border-radius: 14px; 
+    color: black; 
 }
 
 footer .footer a {
     text-decoration: none;
-    color: black; /* Warna teks link */
+    color: black; 
     font-size: 30px;
-    margin: 0 7px; /* Jarak horizontal antar elemen */
+    margin: 0 7px; 
 }
 
 
+.footer a:hover {
+    color: #9e1e1e; 
+}

@@ -2,80 +2,77 @@
 .players {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px; /* Jarak antar elemen pemain */
-    justify-content: flex-start; /* Mengatur posisi elemen ke kiri */
-    align-items: flex-start; /* Menyelaraskan elemen di bagian atas */
-    padding: 10px; /* Menambahkan jarak di dalam container */
+    gap: 20px; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    padding: 10px; 
 }
 
 #players-section h2 {
-    margin-top: 50px; /* Menambahkan jarak dari navbar */
-    text-align: left; /* Menyelaraskan teks ke tengah (opsional) */
-    font-size: 32px; /* Sesuaikan ukuran font */
-   
+    margin-top: 50px; 
+    text-align: left; 
+    font-size: 32px; 
 }
 
-/* Mengatur elemen individual player */
+
 .player {
-    position: relative; /* Agar teks dapat ditempatkan di atas gambar */
-    width: 250px; /* Lebar setiap elemen pemain */
-    text-align:center; /* Konten di dalam player rata tengah */
+    position: relative; 
+    width: 250px; 
+    text-align:center; 
     margin-bottom: 50px;
 }
 
-/* Mengatur gambar pemain */
+
 .player img {
-    width: 100%; /* Gambar memenuhi container player */
-    height: auto; /* Gambar tetap proporsional */
-    object-fit: cover; /* Menjaga proporsi gambar */
-    border-radius: 10px; /* Membuat sudut gambar halus */
-    border: 2px solid #230b0b; /* Menambahkan border putih */
+    width: 100%; 
+    height: auto;
+    object-fit: cover; 
+    border-radius: 10px; 
+    border: 2px solid #230b0b; 
 }
 
-/* Mengatur overlay menjadi baris horizontal */
 .player .overlay {
     position: absolute;
-    top: 170px; /* Jarak dari atas gambar */
-    left: 10px; /* Jarak dari sisi kiri gambar */
-    right: 10px; /* Jarak dari sisi kanan gambar */
-    display: flex; /* Menyusun elemen secara horizontal */
-    justify-content: space-between; /* Jarak maksimum antara elemen kiri dan kanan */
-    align-items: center; /* Rata vertikal elemen */
-    padding: 5px 10px; /* Menambahkan ruang dalam overlay */
-    border-radius: 5px; /* Membuat sudut bulat */
-   
-    color: #fff; /* Warna teks */
+    top: 170px; 
+    left: 10px; 
+    right: 10px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    color: #fff; 
 }
 
 /* Angka pemain */
 .player .overlay .number {
-    font-size: 50px; /* Ukuran font angka */
-    font-weight: bold; /* Angka tebal */
-    color: #fff; /* Warna angka */
-    flex-shrink: 0; /* Angka tidak mengecil */
+    font-size: 50px; 
+    font-weight: bold; 
+    color: #fff; 
+    flex-shrink: 0; 
 }
 
 /* Nama pemain */
 .player .overlay .name {
-    font-size: 20px; /* Ukuran font nama */
-    text-align: right; /* Nama rata kanan */
-    text-transform: uppercase; /* Semua huruf kapital */
-    line-height: 1.2; /* Jarak antar baris */
-    flex-grow: 1; /* Nama memenuhi ruang yang tersedia */
-    margin-left: 20px; /* Jarak dari angka */
+    font-size: 20px; 
+    text-align: right; 
+    text-transform: uppercase; 
+    line-height: 1.2; 
+    flex-grow: 1; 
+    margin-left: 20px; 
 }
 
 .modal {
-    display: none; /* Default tidak terlihat */
-    position: fixed; /* Tetap di posisi yang sama saat di-scroll */
+    display: none; 
+    position: fixed; 
     top: 0;
     left: 0;
-    backdrop-filter: blur(4px); /* Optional: adds a blur effect */
+    backdrop-filter: blur(4px); 
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Transparansi latar belakang */
-    z-index: 1000; /* Agar berada di atas elemen lainnya */
-    overflow: auto; /* Pastikan konten modal tidak terpotong */
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1000; 
+    overflow: auto; 
 }
 
 .modal-header h1 {
@@ -90,10 +87,10 @@
 }
 
 .modal-body {
-    display: flex; /* Mengatur layout sebagai Flexbox */
-    flex-direction: row; /* Elemen disusun secara horizontal */
-    align-items: center; /* Vertikal sejajar */
-    gap: 90px; /* Jarak antara gambar dan biodata */
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 90px; 
     flex-wrap: wrap; 
     padding: 20px;
     border-radius: 10px;
@@ -102,31 +99,31 @@
 #modal-img {
     display: block;
     width: 250px;
-    height: 360px; /* Pastikan proporsi gambar */
-    object-fit: contain; /* Memotong gambar jika perlu */
-    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    height: 360px; 
+    object-fit: contain; 
+    border-radius: 50%; 
     margin-bottom: 0;
 }
 
 .modal-text {
     background-color: rgba(55, 10, 10, 0.8);
-    flex: 1; /* Agar biodata menempati sisa ruang */
+    flex: 1; 
     border-radius: 8px;
     max-width: 400px;
-    color: white; /* Warna teks */
+    color: white; 
     position: relative;
     padding: 15px;
 }
 
 .modal-text p {
-    margin: 10px 0; /* Memberikan margin vertikal antar paragraf */
-    line-height: 1.8; /* Menambah jarak antar baris */
+    margin: 10px 0;
+    line-height: 1.8; 
 }
 
 .modal-text strong {
-    display: inline-block; /* Agar teks label menjadi blok */
-    width: 120px; /* Atur lebar label untuk memberikan ruang */
-    text-align: left; /* Pastikan teks label rata kiri */
+    display: inline-block; 
+    width: 120px; 
+    text-align: left;
 }
 
 
@@ -136,27 +133,27 @@
     padding: 20px;
     width: 90%;
     max-width: 1000px;
-    background-color: #530303;/* Ganti dengan path gambar Anda */
-    background-size: cover; /* Agar gambar menyesuaikan ukuran */
+    background-color: #530303;
+    background-size: cover;
     background-position: center;
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-image: url('../img/biobg.png');
     border: 1px solid #680202;
-    color: white; /* Agar teks kontras dengan gambar */
-    border-radius: 5px; /* Opsional, untuk sudut melengkung */
+    color: white; 
+    border-radius: 5px; 
     
 }
 
 .modal-quote {
     position: absolute;
-    margin-top: 20px; /* Tambahkan jarak atas dari modal-body */
+    margin-top: 20px;
     padding: 10px;
     max-width: 100%;
    width: 100%;
-    color: white; /* Warna teks */
-    text-align: justify; /* Rata tengah teks */
-    font-size: 13px; /* Ukuran font */
+    color: white;
+    text-align: justify;
+    font-size: 13px; 
 }
 
 .modal-headerlogo {
@@ -169,39 +166,137 @@
 }
 
 .logomodal-img {
-    width: 50px; /* Atur ukuran logo */
+    width: 50px;
     height: 50px;
-    object-fit: contain; /* Sesuaikan logo agar proporsional */
+    object-fit: contain;
 }
 
 #modal-number {
-    font-size: 40px; /* Atur ukuran font sesuai kebutuhan */
+    font-size: 40px; 
     font-family: 'Boogaloo', sans-serif;
-    font-weight: bold; /* Opsional: Buat teks lebih tebal */
-    color: white; /* Atur warna teks agar kontras */
-    text-align: center; /* Pastikan teks rata tengah */
-    margin-top: 10px; /* Tambahkan jarak atas (opsional) */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Opsional: Tambahkan bayangan */
+    font-weight: bold; 
+    color: white;
+    text-align: center; 
+    margin-top: 10px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
 
 .back-button {
-    position: absolute; /* Memungkinkan penempatan absolut */
-    bottom: 50px; /* Jarak dari bawah */
-    right: 20px; /* Jarak dari kanan */
-    background: linear-gradient( #ffa61f 60%, #ffffff); /* Gradient: Setengah orange, setengah putih */
-    color: rgb(177, 58, 58); /* Warna teks */
-    text-decoration: none; /* Hilangkan garis bawah */
-    padding: 10px 20px; /* Jarak dalam */
-    border-radius: 8px; /* Sudut melengkung */
-    font-size: 16px; /* Ukuran font */
-    font-weight: bold; /* Teks tebal */
-    text-align: center; /* Rata tengah */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 166, 31, 0.6); /* Efek bayangan mengkilap */
-    transition: all 0.3s ease; /* Efek transisi */
+    position: absolute;
+    bottom: 50px;
+    right: 20px; 
+    background: linear-gradient( #ffa61f 60%, #ffffff); 
+    color: rgb(177, 58, 58); 
+    text-decoration: none; 
+    padding: 10px 20px;
+    border-radius: 8px; 
+    font-size: 16px;
+    font-weight: bold; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 166, 31, 0.6); 
+    transition: all 0.3s ease; 
 }
 
 .back-button:hover {
     background: orange;
-    color: rgb(177, 58, 58); /* Warna teks saat di-hover */
+    color: rgb(177, 58, 58); 
+}
+
+/* Aturan responsif untuk tablet (lebar layar hingga 768px) */
+@media (max-width: 768px) {
+    .players {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+    }
+
+    .player {
+        width: 100%; 
+        margin-bottom: 30px; 
+    }
+
+    .player .overlay {
+        top: 140px; 
+        left: 5px;
+        right: 5px;
+    }
+
+    .modal-body {
+        flex-direction: column; 
+        gap: 20px; 
+    }
+
+    #modal-img {
+        width: 200px; 
+        height: 280px;
+    }
+
+    .modal-text {
+        max-width: 90%; 
+        padding: 10px;
+    }
+
+    .modal-header h1 {
+        font-size: 40px; 
+    }
+
+    .modal-quote {
+        font-size: 12px; 
+        padding: 5px;
+    }
+
+    .back-button {
+        bottom: 20px; 
+        right: 10px;
+        font-size: 14px; 
+        padding: 8px 15px; 
+    }
+}
+
+/* Aturan responsif untuk ponsel (lebar layar hingga 480px) */
+@media (max-width: 480px) {
+    .players {
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+    }
+
+    .player img {
+        border-radius: 5px; 
+    }
+
+    .player .overlay {
+        top: 120px; 
+        padding: 3px 5px; 
+    }
+
+    .player .overlay .number {
+        font-size: 40px; 
+    }
+
+    .player .overlay .name {
+        font-size: 10px; 
+        margin-left: 10px; 
+    }
+
+    #modal-img {
+        width: 150px; 
+        height: 220px;
+    }
+
+    .modal-header h1 {
+        font-size: 32px; 
+    }
+
+    .modal-text {
+      
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .back-button {
+        font-size: 12px; 
+        padding: 6px 12px;
+        bottom: 10px;
+        right: 10px;
+    }
 }

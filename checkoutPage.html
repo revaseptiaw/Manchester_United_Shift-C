@@ -85,7 +85,7 @@
     </main>
 
     <footer class="footer">
-        <a href="index.html" id="home"><i data-feather="home"></i></a>
+        <a href="merchandise.html" id="back"><i data-feather="rewind"></i></a>
         <a href="checkoutPage.html" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
     </footer>
 
@@ -108,10 +108,7 @@
     
                 // Tampilkan setiap item di cart
                 cart.forEach((item, index) => {
-                    // Hitung total harga
                     totalPrice += item.price * item.quantity;
-    
-                    // Tambahkan ke bagian cart-items
                     cartItemsContainer.innerHTML += `
                         <div class="item">
                             <img src="${item.image}" alt="${item.name}">
@@ -149,29 +146,17 @@
                       <button class="checkout-button" id="checkout-button">CheckOut</button>
                 `;
     
-                // Update feather icons
                 feather.replace();
             
-    
-             // Menambahkan event listener pada tombol Checkout
         document.getElementById("checkout-button").addEventListener("click", function() {
-            // Buat pesan untuk WhatsApp
             let message = "Pesanan saya:\n";
             cart.forEach(item => {
                 message += `${item.name} (x${item.quantity}) - Rp. ${(item.price * item.quantity).toLocaleString()}\n`;
             });
             message += `\nTotal: Rp. ${totalPrice.toLocaleString()}`;
-            
-            // Encode pesan untuk URL
             message = encodeURIComponent(message);
-
-            // Nomor WhatsApp tujuan (contoh: +62xxx)
             const phoneNumber = "+62895321089194";
-
-            // Buat URL WhatsApp
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-
-            // Redirect ke WhatsApp
             window.location.href = whatsappURL;
         });
     }

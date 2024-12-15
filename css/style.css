@@ -48,9 +48,9 @@ body {
 }
 
 .logo-img {
-    width: 50px; /* Atur ukuran logo */
+    width: 50px; 
     height: 50px;
-    object-fit: contain; /* Sesuaikan logo agar proporsional */
+    object-fit: contain; 
 }
 
 .navbar-nav {
@@ -71,8 +71,8 @@ body {
 }
 
 .nav-register {
-    background-color: #9e1e1e; /* Latar belakang merah */
-    color: white; /* Warna teks putih */
+    background-color: #9e1e1e; 
+    color: white;
     font-weight: bold;
     padding: 8px 15px;
     border-radius: 5px;
@@ -92,9 +92,9 @@ body {
 
 .hero h1 {
     position: absolute;
-    bottom: 90px;  /* Menempatkan teks 20px dari bawah */
-    left: 30%;  /* Menempatkan teks di tengah secara horizontal */
-    transform: translateX(-50%);  /* Menyempurnakan agar teks tepat di tengah */
+    bottom: 90px;  
+    left: 30%; 
+    transform: translateX(-50%);  
     margin: 0; 
     font-size: 80px;
     font-family:'Metal Mania', cursive;
@@ -107,13 +107,12 @@ body {
     margin-top: 0px;
     text-align: center;
     background-image: linear-gradient(rgba(34, 10, 10, 0.7), rgba(34, 10, 10, 0.7)), url('../img/profile-bg.png') ; /* Tambahkan overlay hitam dengan transparansi */
-    background-repeat: no-repeat; /* Jangan ulangi gambar */
+    background-repeat: no-repeat; 
     background-position: center 50%;
-    /* Posisi logo di tengah */
-    background-size: contain; /* Sesuaikan ukuran gambar agar proporsional */
-    height: 100vh; /* Buat tinggi 100% layar */
-    color: white; /* Warna teks agar kontras dengan background */
-    position: relative; /* Untuk teks di atas background */
+    background-size: contain; 
+    height: 100vh; 
+    color: white;
+    position: relative; 
 }
 
 .profile h2 {
@@ -130,30 +129,30 @@ body {
     font-size: 18px;
     line-height: 1.6;
     font-family: 'Abyssinica SIL', sans-serif;
-    width: 90%; /* Batasi lebar elemen */
+    width: 90%;
     word-wrap: break-word;
     margin: auto;
-    color: white; /* Pastikan teks dapat terlihat */
+    color: white; 
 }
 
 #players-section {
     text-align: left;
     padding: 50px;
     font-size: 30px;
-    position: relative; /* Dibutuhkan untuk posisi tombol */
+    position: relative; 
 }
 
 #players-section h2 {
-    text-align: left; /* Jika ingin judul di tengah */
-    margin-bottom: 25px; /* Jarak antara judul dan elemen pemain */
-    font-size: 40px; /* Ukuran font judul */
+    text-align: left; 
+    margin-bottom: 25px; 
+    font-size: 40px; 
 }
 
 .players {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Mengatur pemain ke tengah */
-    gap: 100px; /* Jarak antar pemain */
+    justify-content: center; 
+    gap: 100px; 
     position: relative;
 }
 
@@ -166,11 +165,11 @@ body {
 }
 
 .player img {
-    width: 210px;  /* Mengatur lebar gambar */
-    height: 210px;  /* Mengatur tinggi gambar */
-    object-fit: cover;  /* Agar gambar tetap proporsional */
-    border-radius: 50%;  /* Membuat gambar bulat */
-    border: 1px solid rgb(42, 5, 5);  /* Menambahkan border */
+    width: 210px;  
+    height: 210px; 
+    object-fit: cover;  
+    border-radius: 50%;  
+    border: 1px solid rgb(42, 5, 5);  
 }
 
 .player p {
@@ -182,10 +181,10 @@ body {
 /* Tombol See More */
 button {
     font-family: 'Bevan', sans-serif;
-    position: absolute; /* Membuat tombol bebas bergerak */
-    bottom: 130px; /* Menempatkan tombol di bagian bawah */
-    right: 70px; /* Menempatkan tombol di sisi kanan */
-    transform: translateY(50%); /* Untuk sedikit jarak dari grid */
+    position: absolute; 
+    bottom: 130px;
+    right: 70px; 
+    transform: translateY(50%); 
     background-color: #482121;
     color: white;
     padding: 10px 20px;
@@ -202,7 +201,7 @@ button:hover {
 /* Footer Styling */
 footer {
     margin-top: 50px;
-    background-color: #220202; /* Warna Merah Gelap */
+    background-color: #220202; 
     padding: 30px ;
     text-align: center;
     position: relative;
@@ -213,28 +212,151 @@ footer {
 .footer-socials {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Jarak antar ikon */
+    gap: 20px;
 }
 
 
 .footer-socials a {
-    color: #fff; /* Warna ikon */
-    font-size: 30px; /* Ukuran ikon */
-    width: 60px; /* Lebar ikon lingkaran */
-    height: 60px; /* Tinggi ikon lingkaran */
-    background-color: #500d0d; /* Warna latar belakang bulat */
-    display: flex; /* Membuat ikon berada di tengah */
-    justify-content: center; /* Memusatkan ikon horizontal */
-    align-items: center; /* Memusatkan ikon vertikal */
-    border-radius: 50%; /* Membuat latar belakang menjadi bulat */
+    color: #fff; 
+    font-size: 30px; 
+    width: 60px; 
+    height: 60px; 
+    background-color: #500d0d; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    margin: 5px; /* Memberi jarak antar ikon */
-    text-decoration: none; /* Hilangkan garis bawah */
+    margin: 5px; 
+    text-decoration: none; 
 }
 
 .footer-socials a:hover {
-    background-color: #ffcc00; /* Warna latar belakang saat hover */
-    transform: scale(1.1); /* Efek zoom saat hover */
-    color: #333; /* Warna ikon saat hover */
+    background-color: #ffcc00; 
+    transform: scale(1.1); 
+    color: #333; 
 }
 
+/* Ukuran layar laptop kecil atau tablet */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 60px; 
+        left: 50%;
+        bottom: 50px;
+    }
+
+    .profile h2 {
+        font-size: 40px;
+    }
+
+    .profile p {
+        font-size: 16px;
+        width: 95%; 
+    }
+
+    .players {
+        gap: 50px;
+    }
+
+    button {
+        right: 30px;
+        bottom: 50px;
+        padding: 8px 15px;
+    }
+}
+
+/* Ukuran layar tablet atau mobile landscape */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; 
+        gap: 10px;
+        padding: 1rem 2%;
+    }
+
+    .navbar-nav {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+        bottom: 40px;
+        left: 50%;
+    }
+
+    .profile h2 {
+        font-size: 30px;
+    }
+
+    .profile p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .players {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .player {
+        width: 150px;
+        height: 150px;
+    }
+
+    .player img {
+        width: 150px;
+        height: 150px;
+    }
+
+    button {
+        position: static; 
+        margin-top: 20px;
+        transform: none;
+    }
+}
+
+/* Ukuran layar mobile */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 40px;
+        bottom: 20px;
+        left: 50%;
+    }
+
+    .profile {
+        padding: 20px;
+    }
+
+    .profile h2 {
+        font-size: 24px;
+    }
+
+    .profile p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .players {
+        gap: 30px;
+    }
+
+    .player {
+        width: 120px;
+        height: 120px;
+    }
+
+    .player img {
+        width: 120px;
+        height: 120px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .footer-socials a {
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+    }
+}
