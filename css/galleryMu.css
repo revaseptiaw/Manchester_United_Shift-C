@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+}
+
+/* Animasi untuk Heading */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container .heading {
+   width: 40%;
+    padding-bottom: 50px;
+    margin-top: 40px;
+}
+.container .heading h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    animation: slideIn 1s ease-in-out; /* Animasi muncul dari kiri */
+}
+
+.container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.container .box .dream img {
+
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in-out; /* Animasi muncul */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek Hover */
+
+}
+
+/* Efek Hover: Zoom dan Shadow */
+.container .box .dream img:hover {
+    transform: scale(1.05); /* Zoom gambar sedikit */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan */
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 769px){
+    .container .box {
+       
+        flex-direction: column;
+    }
+    .container .box .dream {
+       
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 643px){
+    .container .heading {
+        width: 100%;
+     }
+     .container .heading h1 {
+         font-size: 1rem;
+      
+     }
+     
+}
+
+/* Animasi Fade-in saat Halaman Dimuat */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

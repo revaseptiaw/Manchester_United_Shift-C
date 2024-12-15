@@ -21,7 +21,7 @@ html {
 body {
     background-color: var(--bg);
     color: #ffff;
-    min-height: 5000px;
+    min-height: 100vh;
     font-family: 'Koh Santepheap', sans-serif; 
 
 }
@@ -197,5 +197,44 @@ button {
 
 button:hover {
     background-color: #4f0505;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 50px;
+    background-color: #220202; /* Warna Merah Gelap */
+    padding: 30px ;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar ikon */
+}
+
+
+.footer-socials a {
+    color: #fff; /* Warna ikon */
+    font-size: 30px; /* Ukuran ikon */
+    width: 60px; /* Lebar ikon lingkaran */
+    height: 60px; /* Tinggi ikon lingkaran */
+    background-color: #500d0d; /* Warna latar belakang bulat */
+    display: flex; /* Membuat ikon berada di tengah */
+    justify-content: center; /* Memusatkan ikon horizontal */
+    align-items: center; /* Memusatkan ikon vertikal */
+    border-radius: 50%; /* Membuat latar belakang menjadi bulat */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 5px; /* Memberi jarak antar ikon */
+    text-decoration: none; /* Hilangkan garis bawah */
+}
+
+.footer-socials a:hover {
+    background-color: #ffcc00; /* Warna latar belakang saat hover */
+    transform: scale(1.1); /* Efek zoom saat hover */
+    color: #333; /* Warna ikon saat hover */
 }
 

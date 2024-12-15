@@ -1,0 +1,49 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #800000; /* Warna merah gelap */
+    border-bottom: 2px solid #a30000;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid responsif */
+    gap: 10px; /* Jarak antar gambar */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centering */
+}
+
+.gallery-item {
+    overflow: hidden; /* Mencegah gambar keluar dari kontainer */
+    border: 3px solid #a30000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out; /* Efek animasi hover */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1); /* Zoom saat hover */
+}
+
